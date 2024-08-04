@@ -1,9 +1,12 @@
-@keyframes balloon {
+@keyframes balloon-up-down {
 	0% {
-		bottom: 20%;
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(100%);
 	}
 	100% {
-		bottom: 70%;
+		transform: translateY(0);
 	}
 }
 
@@ -20,5 +23,17 @@
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: contain;
+
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-name: balloon-up-down;
+		animation-duration: 3s;
 	}
+
+	/*.balloon:hover {
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-name: balloon;
+		animation-duration: 5s;
+	}*/
 }
