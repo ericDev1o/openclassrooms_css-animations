@@ -9,7 +9,32 @@
 		transform: translateY(0);
 	}
 }
-
+@keyframes balloon-up-down-alt {
+	to {
+		/*transform: translateY(0);*/
+		transform: scaleX(2.4);
+	}
+	from {
+		/*transform: translateY(0);*/
+		transform: scaleX(4.2);
+	}
+}
+@keyframes balloon-q6 {
+	from {
+	    bottom: 20%;
+	}
+	to {
+	    bottom: 70%;
+	}
+}
+@keyframes balloon-grow {
+	from {
+		transform: scale(2);
+	}
+	to {
+		transform: scale(4);
+	}
+}
 .balloon-container {
 	width: 120px;
 	height: 175px;
@@ -24,16 +49,24 @@
 		background-repeat: no-repeat;
 		background-size: contain;
 
+		border: 1px solid black;
+		cursor: pointer;
+		animation: balloon-grow 10000ms;
+		/*animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-name: balloon-q6;
+		animation-duration: 3s;*/
+	}
+	.balloon:hover {
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
 		animation-name: balloon-up-down;
-		animation-duration: 3s;
-	}
-
-	/*.balloon:hover {
-		animation-timing-function: ease-in-out;
-		animation-iteration-count: infinite;
-		animation-name: balloon;
 		animation-duration: 5s;
-	}*/
+	}
+	.balloon:active {
+		animation-duration: 3s;
+		animation-name: balloon-up-down-alt;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+	}
 }
