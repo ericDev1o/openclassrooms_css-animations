@@ -1,0 +1,4 @@
+node_modules/*
+*-lock.json
+.sass-cache/*
+./part-3-activity/css/*.map

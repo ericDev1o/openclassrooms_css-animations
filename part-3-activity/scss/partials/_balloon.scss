@@ -11,11 +11,18 @@
 }
 @keyframes balloon-up-down-alt {
 	to {
-		/*transform: translateY(0);*/
+		transform: translateY(0);
+		
+	}
+	from {
+		transform: translateY(0);
+	}
+}
+@keyframes balloon-grow-X {
+	to {
 		transform: scaleX(2.4);
 	}
 	from {
-		/*transform: translateY(0);*/
 		transform: scaleX(4.2);
 	}
 }
@@ -51,11 +58,14 @@
 
 		border: 1px solid black;
 		cursor: pointer;
+		/*q3
 		animation: balloon-grow 10000ms;
+		animation-fill-mode: forwards;*/
 		/*animation-timing-function: ease-in-out;
 		animation-iteration-count: infinite;
 		animation-name: balloon-q6;
 		animation-duration: 3s;*/
+		animation: balloon-q6 5000ms 0ms alternate-reverse infinite;
 	}
 	.balloon:hover {
 		animation-timing-function: linear;
@@ -64,9 +74,9 @@
 		animation-duration: 5s;
 	}
 	.balloon:active {
-		animation-duration: 3s;
-		animation-name: balloon-up-down-alt;
 		animation-timing-function: linear;
 		animation-iteration-count: infinite;
+		animation-name: balloon-up-down-alt;
+		animation-duration: 3s;
 	}
 }
